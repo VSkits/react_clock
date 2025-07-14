@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  currenTimeName: string;
+  cklockName: string;
 };
 type State = {
   time: string;
@@ -25,10 +25,10 @@ export class Clock extends React.PureComponent<Props, State> {
   }
 
   componentDidUpdate(prevProps: Readonly<Props>): void {
-    if (prevProps.currenTimeName !== this.props.currenTimeName) {
+    if (prevProps.cklockName !== this.props.cklockName) {
       // eslint-disable-next-line no-console
       console.warn(
-        `Renamed from ${prevProps.currenTimeName} to ${this.props.currenTimeName}`,
+        `Renamed from ${prevProps.cklockName} to ${this.props.cklockName}`,
       );
     }
   }
@@ -38,7 +38,7 @@ export class Clock extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { currenTimeName } = this.props;
+    const { cklockName: currenTimeName } = this.props;
     const { time } = this.state;
 
     return (

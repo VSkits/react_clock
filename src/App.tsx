@@ -61,7 +61,7 @@ export class App extends React.PureComponent<Props, State> {
     return (
       <div className="App">
         <h1>React clock</h1>
-        {hasClock && <Clock currenTimeName={clockName} />}
+        {hasClock && <Clock cklockName={clockName} />}
       </div>
     );
   }
